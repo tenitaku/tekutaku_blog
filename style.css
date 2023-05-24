@@ -1,0 +1,65 @@
+/* 基本のスタイリング */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF5E6; /* 軽いオレンジ色の背景 */
+  }
+  
+  /* ヘッダー */
+  header {
+    background-color: #FFA500; /* オレンジ色 */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  /* ナビゲーションメニュー */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FFA500; /* オレンジ色 */
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* メインコンテンツ */
+  main {
+    padding: 20px;
+  }
+  
+  /* ブログ記事 */
+  article {
+    margin-bottom: 20px;
+  }
+  
+  article h2 {
+    color: #FF4500; /* 濃いオレンジ色 */
+  }
+  
+  /* フッター */
+  footer {
+    background-color: #FFA500; /* オレンジ色 */
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  

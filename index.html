@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>てくたくBlog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prism.css">
+</head>
+<body>
+  <header>
+    <h1>てくたくBlog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">技術記事一覧</a></li>
+        <li><a href="#">アルゴリズム系記事</a></li>
+        <li><a href="#">データ構造系記事</a></li>
+        <li><a href="#">てくたくBlogについて</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ここにブログ記事を追加する -->
+    <!-- 以下は一例です -->
+    <article>
+    <h2>Union-Findまとめ</h2>
+    <section>
+        <h3>Quick-Find</h3>
+        <p>Quick-Findアルゴリズムは、名前が示すように、「Find」操作が非常に高速です。各要素は自身が所属する集合を示すIDを保持しており、同じ集合に所属する要素はすべて同じIDを持ちます。これにより、「Find」操作はO(1)の時間計算量で行うことができます。
+ただし、「Union」操作は遅いです。というのも、2つの集合を併合する際には、一方の集合のすべての要素のIDを更新しなければならないからです。したがって、「Union」操作はO(n)の時間計算量を必要とします。空間計算量はO(n)です。</p>
+    </section>    
+    <section>
+    <pre><code class="language-java">
+            public class QuickFind {
+                private int[] id;
+            
+                public QuickFind(int size) {
+                    id = new int[size];
+                    for (int i = 0; i < size; i++) {
+                        id[i] = i;
+                    }
+                }
+            
+                public boolean connected(int p, int q) {
+                    return id[p] == id[q];
+                }
+            
+                public void union(int p, int q) {
+                    int pid = id[p];
+                    int qid = id[q];
+                    for (int i = 0; i < id.length; i++) {
+                        if (id[i] == pid) {
+                            id[i] = qid;
+                        }
+                    }
+                }
+            }            
+        </code></pre>
+      </section>
+    </article>
+
+    <!-- 記事はこのように追加します -->
+  </main>
+
+  <footer>
+    <a href="#">お問い合わせ</a>
+  </footer>
+  <!-- ここにJavaScriptのリンクを挿入 -->
+  <script src="prism.js"></script>
+</body>
+</html>
